@@ -5,7 +5,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v3
+      - name: Get changes
+        uses: action/checkout@v3
         with:
           fetch-depth: 0
       - name: Get changes
