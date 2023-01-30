@@ -11,7 +11,7 @@ jobs:
       - name: Get changes
         id: changes
         uses: tj-actions/changes@v34
-      - name:
+      - name: Count
         run: |
           for file in ${{ steps.changes.outputs.all_changes_files }}; do
           echo "Quantity tabs in ${file} is `grep -o '\t' $file | wc -l`" >> report.log 2>&1
